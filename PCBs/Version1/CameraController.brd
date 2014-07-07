@@ -126,7 +126,7 @@
 <wire x1="45.009" y1="0" x2="44.978" y2="45.996" width="0" layer="20"/>
 <wire x1="44.978" y1="45.996" x2="0" y2="45.996" width="0" layer="20"/>
 <wire x1="0" y1="45.996" x2="0" y2="0" width="0" layer="20"/>
-<text x="28.448" y="37.719" size="1.778" layer="52" font="vector" ratio="16" rot="SMR270">Camera Controller
+<text x="28.448" y="37.719" size="1.778" layer="52" font="vector" ratio="15" rot="SMR270">Camera Controller
 Version 1.0
 Mini USB Input
 2 Audio Jacks, 2 BNC
@@ -877,31 +877,31 @@ design rules under a new name.</description>
 <attribute name="OC_FARNELL" value="unknown" x="32.999" y="28.884" size="1.778" layer="27" display="off"/>
 </element>
 <element name="MSP430" library="BiphasicBoard" package="20_PIN" value="" x="18.545" y="10.772" smashed="yes" rot="R270">
-<attribute name="NAME" x="17.2657" y="6.2411" size="0.6096" layer="25" rot="SR0"/>
+<attribute name="NAME" x="17.2657" y="6.2411" size="0.6096" layer="25" font="vector" ratio="15" rot="SR0"/>
 <attribute name="VALUE" x="17.275" y="13.312" size="1.27" layer="27" rot="R270"/>
 </element>
 <element name="CAM1_LED" library="CameraController" package="LED_1206" value="" x="10.604" y="16.793" smashed="yes" rot="R180">
 <attribute name="SPICEMODEL" value="NONE" x="10.604" y="16.793" size="1.778" layer="27" rot="R180" display="off"/>
 <attribute name="SPICETYPE" value="diode" x="10.604" y="16.793" size="1.778" layer="27" rot="R180" display="off"/>
 <attribute name="SPICEPREFIX" value="D" x="10.604" y="16.793" size="1.778" layer="27" rot="R180" display="off"/>
-<attribute name="NAME" x="12.764" y="16.5572" size="0.6096" layer="25" rot="SR0"/>
+<attribute name="NAME" x="12.764" y="16.5572" size="0.6096" layer="25" font="vector" ratio="15" rot="SR0"/>
 <attribute name="VALUE" x="11.874" y="19.333" size="1.27" layer="27" rot="R180"/>
 </element>
 <element name="C1" library="CameraController" package="C0805" value="10uF" x="43.151" y="38.798" smashed="yes" rot="R270">
-<attribute name="NAME" x="43.7764" y="41.6088" size="0.6096" layer="25" rot="R180"/>
+<attribute name="NAME" x="43.7764" y="41.6088" size="0.635" layer="25" font="vector" ratio="15" rot="R180"/>
 </element>
 <element name="C2" library="CameraController" package="C0603" value=".1uF" x="40.611" y="38.29" smashed="yes" rot="R270">
-<attribute name="NAME" x="39.7388" y="40.0776" size="0.6096" layer="25"/>
+<attribute name="NAME" x="39.7388" y="40.0776" size="0.635" layer="25" font="vector" ratio="15"/>
 </element>
 <element name="C3" library="CameraController" package="C0603" value=".1uF" x="18.386" y="19.748" smashed="yes" rot="R270">
-<attribute name="NAME" x="18.098" y="21.5102" size="0.6096" layer="25"/>
+<attribute name="NAME" x="18.098" y="21.5102" size="0.6096" layer="25" font="vector" ratio="15"/>
 </element>
 <element name="JP1" library="CameraController" package="AUDIO-JACK" value="" x="5.525" y="24.355" smashed="yes">
-<attribute name="NAME" x="4.255" y="26.895" size="0.4064" layer="25"/>
+<attribute name="NAME" x="4.255" y="26.895" size="0.635" layer="25" font="vector" ratio="15"/>
 <attribute name="VALUE" x="4.255" y="25.625" size="0.4064" layer="27"/>
 </element>
 <element name="JP2" library="CameraController" package="AUDIO-JACK" value="" x="5.398" y="9.242" smashed="yes">
-<attribute name="NAME" x="4.128" y="11.782" size="0.4064" layer="25"/>
+<attribute name="NAME" x="4.128" y="11.782" size="0.635" layer="25" font="vector" ratio="15"/>
 <attribute name="VALUE" x="4.128" y="10.512" size="0.4064" layer="27"/>
 </element>
 <element name="PIN_HEADER" library="con-lstb" package="MA04-1" value="" x="21.646" y="3.617" smashed="yes" rot="R180">
@@ -912,93 +912,101 @@ design rules under a new name.</description>
 <attribute name="VALUE" x="21.011" y="1.966" size="1.27" layer="27" ratio="10" rot="R180"/>
 </element>
 <element name="R1" library="BiphasicBoard" package="R1206" value="" x="24.296" y="22.392" smashed="yes">
+<<<<<<< HEAD
 <attribute name="NAME" x="27.0646" y="22.4174" size="0.6096" layer="25"/>
+=======
+<attribute name="NAME" x="27.0646" y="24.7034" size="0.6096" layer="25" font="vector" ratio="15"/>
+>>>>>>> origin/master
 <attribute name="VALUE" x="22.899" y="19.979" size="1.27" layer="27"/>
 </element>
 <element name="BNC2" library="SparkFun-Connectors" package="BNC" value="BNCPTH" x="34.079" y="10.539" smashed="yes" rot="R270">
-<attribute name="NAME" x="42.969" y="16.889" size="0.4064" layer="25" rot="R270"/>
-<attribute name="VALUE" x="41.699" y="16.889" size="0.4064" layer="27" rot="SR270"/>
+<attribute name="NAME" x="42.969" y="16.889" size="0.635" layer="25" font="vector" ratio="15" rot="R270"/>
+<attribute name="VALUE" x="41.699" y="16.889" size="0.635" layer="27" font="vector" ratio="15" rot="SR270"/>
 </element>
 <element name="BNC1" library="SparkFun-Connectors" package="BNC" value="BNCPTH" x="34.197" y="28.717" smashed="yes" rot="R270">
-<attribute name="NAME" x="43.087" y="35.067" size="0.4064" layer="25" rot="R270"/>
-<attribute name="VALUE" x="41.817" y="35.067" size="0.4064" layer="27" rot="SR270"/>
+<attribute name="NAME" x="43.087" y="35.067" size="0.635" layer="25" font="vector" ratio="15" rot="R270"/>
+<attribute name="VALUE" x="41.817" y="35.067" size="0.635" layer="27" font="vector" ratio="15" rot="SR270"/>
 </element>
 <element name="SYNC1_LED" library="CameraController" package="LED_1206" value="" x="32.579" y="1.406" smashed="yes">
 <attribute name="SPICEMODEL" value="NONE" x="32.579" y="1.406" size="1.778" layer="27" display="off"/>
 <attribute name="SPICETYPE" value="diode" x="32.579" y="1.406" size="1.778" layer="27" display="off"/>
 <attribute name="SPICEPREFIX" value="D" x="32.579" y="1.406" size="1.778" layer="27" display="off"/>
-<attribute name="NAME" x="23.3588" y="0.8472" size="0.6096" layer="25"/>
+<attribute name="NAME" x="23.3588" y="0.8472" size="0.6096" layer="25" font="vector" ratio="15"/>
 <attribute name="VALUE" x="31.309" y="-1.134" size="1.27" layer="27"/>
 </element>
 <element name="RXLED" library="CameraController" package="LED_1206" value="" x="19.237" y="26.958" smashed="yes" rot="R180">
 <attribute name="SPICEMODEL" value="NONE" x="19.237" y="26.958" size="1.778" layer="27" rot="R180" display="off"/>
 <attribute name="SPICETYPE" value="diode" x="19.237" y="26.958" size="1.778" layer="27" rot="R180" display="off"/>
 <attribute name="SPICEPREFIX" value="D" x="19.237" y="26.958" size="1.778" layer="27" rot="R180" display="off"/>
-<attribute name="NAME" x="17.4152" y="28.2362" size="0.6096" layer="25" rot="SR0"/>
+<attribute name="NAME" x="17.4152" y="28.2362" size="0.6096" layer="25" font="vector" ratio="15" rot="SR0"/>
 <attribute name="VALUE" x="20.507" y="29.498" size="1.27" layer="27" rot="R180"/>
 </element>
 <element name="TXLED" library="CameraController" package="LED_1206" value="" x="19.237" y="24.715" smashed="yes" rot="R180">
 <attribute name="SPICEMODEL" value="NONE" x="19.237" y="24.715" size="1.778" layer="27" rot="R180" display="off"/>
 <attribute name="SPICETYPE" value="diode" x="19.237" y="24.715" size="1.778" layer="27" rot="R180" display="off"/>
 <attribute name="SPICEPREFIX" value="D" x="19.237" y="24.715" size="1.778" layer="27" rot="R180" display="off"/>
-<attribute name="NAME" x="20.1768" y="23.5466" size="0.6096" layer="25" rot="R180"/>
+<attribute name="NAME" x="20.1768" y="23.5466" size="0.6096" layer="25" font="vector" ratio="15" rot="R180"/>
 <attribute name="VALUE" x="20.507" y="27.255" size="1.27" layer="27" rot="R180"/>
 </element>
 <element name="R2" library="BiphasicBoard" package="R1206" value="" x="24.264" y="24.765" smashed="yes" rot="R180">
+<<<<<<< HEAD
 <attribute name="NAME" x="28.1248" y="24.9428" size="0.6096" layer="25" rot="R180"/>
+=======
+<attribute name="NAME" x="28.1248" y="22.6568" size="0.6096" layer="25" font="vector" ratio="15" rot="R180"/>
+>>>>>>> origin/master
 <attribute name="VALUE" x="25.661" y="27.178" size="1.27" layer="27" rot="R180"/>
 </element>
 <element name="R3" library="BiphasicBoard" package="R1206" value="" x="24.264" y="27.101" smashed="yes" rot="R180">
-<attribute name="NAME" x="28.074" y="27.2788" size="0.6096" layer="25" rot="R180"/>
+<attribute name="NAME" x="28.074" y="27.2788" size="0.6096" layer="25" font="vector" ratio="15" rot="R180"/>
 <attribute name="VALUE" x="25.661" y="29.514" size="1.27" layer="27" rot="R180"/>
 </element>
 <element name="U1" library="SparkFun-DigitalIC" package="SSOP28DB" value="FT232RLSSOP" x="18.738" y="35.148" smashed="yes" rot="R90">
 <attribute name="PROD_ID" value="IC-00870" x="18.738" y="35.148" size="1.778" layer="27" rot="R90" display="off"/>
-<attribute name="VALUE" x="21.1638" y="29.533" size="0.4064" layer="27" rot="R180"/>
+<attribute name="VALUE" x="21.1638" y="29.533" size="0.4064" layer="27" font="vector" ratio="15" rot="R180"/>
 </element>
 <element name="R4" library="BiphasicBoard" package="R1206" value="" x="29.848" y="34.791" smashed="yes" rot="R90">
-<attribute name="NAME" x="30.233" y="31.9308" size="0.6096" layer="25" rot="R180"/>
+<attribute name="NAME" x="30.233" y="31.9308" size="0.6096" layer="25" font="vector" ratio="15" rot="R180"/>
 <attribute name="VALUE" x="32.261" y="33.394" size="1.27" layer="27" rot="R90"/>
 </element>
 <element name="R5" library="BiphasicBoard" package="R1206" value="" x="5.468" y="16.817" smashed="yes" rot="R180">
-<attribute name="NAME" x="1.4408" y="16.6602" size="0.6096" layer="25" rot="SR0"/>
+<attribute name="NAME" x="1.4408" y="16.6602" size="0.6096" layer="25" font="vector" ratio="15" rot="SR0"/>
 <attribute name="VALUE" x="6.865" y="19.23" size="1.27" layer="27" rot="R180"/>
 </element>
 <element name="CAM2_LED" library="CameraController" package="LED_1206" value="" x="10.474" y="1.62" smashed="yes" rot="R180">
 <attribute name="SPICEMODEL" value="NONE" x="10.474" y="1.62" size="1.778" layer="27" rot="R180" display="off"/>
 <attribute name="SPICETYPE" value="diode" x="10.474" y="1.62" size="1.778" layer="27" rot="R180" display="off"/>
 <attribute name="SPICEPREFIX" value="D" x="10.474" y="1.62" size="1.778" layer="27" rot="R180" display="off"/>
-<attribute name="NAME" x="13.1226" y="0.92" size="0.6096" layer="25" rot="SR0"/>
+<attribute name="NAME" x="13.1226" y="0.92" size="0.6096" layer="25" font="vector" ratio="15" rot="SR0"/>
 <attribute name="VALUE" x="11.744" y="4.16" size="1.27" layer="27" rot="R180"/>
 </element>
 <element name="SYNC2_LED" library="CameraController" package="LED_1206" value="" x="32.96" y="19.546" smashed="yes">
 <attribute name="SPICEMODEL" value="NONE" x="32.96" y="19.546" size="1.778" layer="27" display="off"/>
 <attribute name="SPICETYPE" value="diode" x="32.96" y="19.546" size="1.778" layer="27" display="off"/>
 <attribute name="SPICEPREFIX" value="D" x="32.96" y="19.546" size="1.778" layer="27" display="off"/>
-<attribute name="NAME" x="25.3908" y="19.2158" size="0.6096" layer="25" rot="SR0"/>
+<attribute name="NAME" x="25.3908" y="19.2158" size="0.6096" layer="25" font="vector" ratio="15" rot="SR0"/>
 <attribute name="VALUE" x="31.69" y="17.006" size="1.27" layer="27"/>
 </element>
 <element name="R6" library="BiphasicBoard" package="R1206" value="" x="5.087" y="1.586" smashed="yes" rot="R180">
-<attribute name="NAME" x="1.2122" y="1.335" size="0.6096" layer="25" rot="SR0"/>
+<attribute name="NAME" x="1.2122" y="1.335" size="0.6096" layer="25" font="vector" ratio="15" rot="SR0"/>
 <attribute name="VALUE" x="6.484" y="3.999" size="1.27" layer="27" rot="R180"/>
 </element>
 <element name="R7" library="BiphasicBoard" package="R1206" value="" x="37.712" y="1.412" smashed="yes">
-<attribute name="NAME" x="40.8362" y="1.3358" size="0.6096" layer="25" rot="SR0"/>
+<attribute name="NAME" x="40.8362" y="1.3358" size="0.6096" layer="25" font="vector" ratio="15" rot="SR0"/>
 <attribute name="VALUE" x="36.315" y="-1.001" size="1.27" layer="27"/>
 </element>
 <element name="R8" library="BiphasicBoard" package="R1206" value="" x="38.347" y="19.523" smashed="yes">
-<attribute name="NAME" x="41.395" y="19.1928" size="0.6096" layer="25"/>
+<attribute name="NAME" x="41.395" y="19.1928" size="0.6096" layer="25" font="vector" ratio="15"/>
 <attribute name="VALUE" x="36.95" y="17.11" size="1.27" layer="27"/>
 </element>
 <element name="PWR_LED" library="CameraController" package="LED_1206" value="" x="20.133" y="15.797" smashed="yes">
 <attribute name="SPICEMODEL" value="NONE" x="20.133" y="15.797" size="1.778" layer="27" display="off"/>
 <attribute name="SPICETYPE" value="diode" x="20.133" y="15.797" size="1.778" layer="27" display="off"/>
 <attribute name="SPICEPREFIX" value="D" x="20.133" y="15.797" size="1.778" layer="27" display="off"/>
-<attribute name="NAME" x="18.7868" y="17.1432" size="0.6096" layer="25" rot="SR0"/>
+<attribute name="NAME" x="18.7868" y="17.1432" size="0.6096" layer="25" font="vector" ratio="15" rot="SR0"/>
 <attribute name="VALUE" x="18.863" y="13.257" size="1.27" layer="27"/>
 </element>
 <element name="R9" library="BiphasicBoard" package="R1206" value="" x="24.9612" y="15.7978" smashed="yes">
-<attribute name="NAME" x="28.8868" y="16.2062" size="0.6096" layer="25" rot="R180"/>
+<attribute name="NAME" x="28.8868" y="16.2062" size="0.6096" layer="25" font="vector" ratio="15" rot="R180"/>
 <attribute name="VALUE" x="23.5642" y="13.3848" size="1.27" layer="27"/>
 </element>
 <element name="NC" library="con-lstb" package="MA09-1" value="" x="29.845" y="42.926" smashed="yes">
@@ -1009,11 +1017,11 @@ design rules under a new name.</description>
 <attribute name="VALUE" x="29.845" y="40.005" size="1.27" layer="27" ratio="10"/>
 </element>
 <element name="OSCI" library="BiphasicBoard" package="1X01" value="" x="14.605" y="42.926" smashed="yes">
-<attribute name="NAME" x="13.3858" y="40.64" size="0.6096" layer="25" ratio="10"/>
+<attribute name="NAME" x="13.3858" y="40.64" size="0.635" layer="25" font="vector" ratio="15"/>
 <attribute name="VALUE" x="13.335" y="39.751" size="1.27" layer="27"/>
 </element>
 <element name="OSCO" library="BiphasicBoard" package="1X01" value="" x="17.145" y="42.926" smashed="yes">
-<attribute name="NAME" x="15.9766" y="40.6908" size="0.6096" layer="25" ratio="10"/>
+<attribute name="NAME" x="15.9766" y="40.6908" size="0.635" layer="25" font="vector" ratio="15"/>
 <attribute name="VALUE" x="15.875" y="39.751" size="1.27" layer="27"/>
 </element>
 </elements>
