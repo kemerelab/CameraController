@@ -15,4 +15,36 @@ CAM2_LED - flashes when a square wave is output to corresponding audio jack, off
 SYNC1_LED - flashes when a square wave is output to corresponding BNC connector, off otherwise
 SYNC2_LED - flashes when a square wave is output to corresponding BNC connector, off otherwise
 
-Initial MSP430 code provided. Can be altered as needed.
+Recommended Resistors and Capacitors Values:
+C1 - 10 uF
+C2 - .1 uF
+C3 - .1 uF
+R1 - 330 ohms
+R2 - 47k ohms
+R3 - 330 ohms
+R4 - 10k ohms
+R5 - 330 ohms
+R6 - 330 ohms
+R7 - 330 ohms
+R8 - 330 ohms
+R9 - 330 ohms
+
+Default MSP430 code provided (see msp430_code.c). Can be altered as needed.
+
+Default Input Commands:
+'15hz' - set the frequency of all signals to 15 Hz
+'30hz' - set the frequency of all signals to 30 Hz (default frequency)
+'40hz' - set the frequency of all signals to 40 Hz
+'50hz' - set the frequency of all signals to 50 Hz
+'60hz' - set the frequency of all signals to 60 Hz
+'test' - generates 100 square pulses through all outputs at the current frequency (cannot be stopped)
+'all' - continuously generate square waves through all outputs until stopped
+'cam' - continuously generate square waves through both audio jacks until stopped
+'sync' - continuously generate square waves through both BNC connectors until stopped
+'side1' - continuously generate square waves through audio jack 1 and BNC connector 2 until stopped
+'side2' - continuously generate square waves through audio jack 2 and BNC connector 1 until stopped
+'cam1' - continuously generate a square wave through audio jack 1 until stopped
+'cam2' - continuously generate a square wave through audio jack 2 until stopped
+'sync1' - continuously generate a square wave through BNC connector 1 until stopped
+'sync2' - continuously generate a square wave through BNC connector 2 until stopped
+Enter - stop generating square waves

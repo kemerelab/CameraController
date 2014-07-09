@@ -1,11 +1,10 @@
 #include <msp430.h>
 #include "stdint.h"
 
-#define frequency 30 //Hz (30)
-#define pulse_delay 16000000/(2*frequency)
 
 const unsigned long smclk_freq = 16000000;      // SMCLK frequency in hertz
 const unsigned long bps = 9600;                 // Async serial bit rate
+int freq = 30;
 int i = 0;										//counter
 int ALL = 0;								//flag
 int SYNC1 = 0;
@@ -24,13 +23,31 @@ void out(data){                                 //function to output characters 
     UCA0TXBUF = data;
 }
 
+void pulse_delay(freq){
+	if (freq == 30){
+		_delay_cycles(16000000/60);
+	}
+	else if (freq == 60){
+		_delay_cycles(16000000/120);
+	}
+	else if (freq == 40){
+		_delay_cycles(16000000/80);
+	}
+	else if (freq == 50){
+		_delay_cycles(16000000/100);
+	}
+	else if (freq == 15){
+		_delay_cycles(16000000/30);
+	}
+}
+
 void cameratest(void){					//test function. outputs 30 pulses
-	for (i=30;i>0;i--){
+	for (i=100;i>0;i--){
 		P2OUT ^= BIT0 + BIT1 + BIT2 + BIT3 + BIT4 + BIT5 + BIT6 + BIT7;
-		_delay_cycles(pulse_delay);
+		pulse_delay(freq);
 
 		P2OUT ^= BIT0 + BIT1 + BIT2 + BIT3 + BIT4 + BIT5 + BIT6 + BIT7;
-		_delay_cycles(pulse_delay);
+		pulse_delay(freq);
 	}
 }
 
@@ -61,67 +78,67 @@ void main(void){
 
 		while (ALL){
 				P2OUT ^= BIT0 + BIT1 + BIT2 + BIT3 + BIT4 + BIT5 + BIT6 + BIT7;
-				_delay_cycles(pulse_delay);
+				pulse_delay(freq);
 				P2OUT ^= BIT0 + BIT1 + BIT2 + BIT3 + BIT4 + BIT5 + BIT6 + BIT7;
-				_delay_cycles(pulse_delay);
+				pulse_delay(freq);
 			}
 
 		while (SYNC1){
 				P2OUT ^= BIT4 + BIT5;
-				_delay_cycles(pulse_delay);
+				pulse_delay(freq);
 				P2OUT ^= BIT4 + BIT5;
-				_delay_cycles(pulse_delay);
+				pulse_delay(freq);
 			}
 
 
 		while (SYNC2){
 				P2OUT ^= BIT6 + BIT7;
-				_delay_cycles(pulse_delay);
+				pulse_delay(freq);
 				P2OUT ^= BIT6 + BIT7;
-				_delay_cycles(pulse_delay);
+				pulse_delay(freq);
 			}
 
 
 		while (CAM1){
 				P2OUT ^= BIT0 + BIT1;
-				_delay_cycles(pulse_delay);
+				pulse_delay(freq);
 				P2OUT ^= BIT0 + BIT1;
-				_delay_cycles(pulse_delay);
+				pulse_delay(freq);
 			}
 
 		while (CAM2){
 				P2OUT ^= BIT2 + BIT3;
-				_delay_cycles(pulse_delay);
+				pulse_delay(freq);
 				P2OUT ^= BIT2 + BIT3;
-				_delay_cycles(pulse_delay);
+				pulse_delay(freq);
 			}
 
 		while (SIDE1){
 				P2OUT ^= BIT0 + BIT1 + BIT6 + BIT7;
-				_delay_cycles(pulse_delay);
+				pulse_delay(freq);
 				P2OUT ^= BIT0 + BIT1 + BIT6 + BIT7;
-				_delay_cycles(pulse_delay);
+				pulse_delay(freq);
 			}
 
 		while (SIDE2){
 				P2OUT ^= BIT2 + BIT3 + BIT4 + BIT5;
-				_delay_cycles(pulse_delay);
+				pulse_delay(freq);
 				P2OUT ^= BIT2 + BIT3 + BIT4 + BIT5;
-				_delay_cycles(pulse_delay);
+				pulse_delay(freq);
 			}
 
 		while (SYNC){
 				P2OUT ^= BIT4 + BIT5 + BIT6 + BIT7;
-				_delay_cycles(pulse_delay);
+				pulse_delay(freq);
 				P2OUT ^= BIT4 + BIT5 + BIT6 + BIT7;
-				_delay_cycles(pulse_delay);
+				pulse_delay(freq);
 			}
 
 		while (CAM){
 				P2OUT ^= BIT0 + BIT1 + BIT2 + BIT3;
-				_delay_cycles(pulse_delay);
+				pulse_delay(freq);
 				P2OUT ^= BIT0 + BIT1 + BIT2 + BIT3;
-				_delay_cycles(pulse_delay);
+				pulse_delay(freq);
 			}
 
     }
@@ -137,49 +154,70 @@ __interrupt void USCI0RX_ISR(void)
 	    if (UCA0RXBUF == 0x0d){         //if enter is pressed, check to see if a valid command has been input
 	        out('\r');
 	        out('\n');
-	        ALL = SYNC1 = SYNC2 = CAM1 = CAM2 = SIDE1 = SIDE2 = SYNC = CAM = 0;
 
-	        if ((test[0] == 't'||test[0] == 'T') && (test[1] == 's' || test[1] == 'S') && (test[2] == 'e' || test[2] == 'E') && (test[3] == 't' || test[3] == 'T')){ //outputs '30pulses@"x"hz
-	        	cameratest();
-	        	out('3');out('0');out('p');out('u');out('l');out('s');out('e');out('s');out('@');out(frequency / 10 +48); out(frequency % 10 + 48);out('h');out('z');out('\r');out('\n');
+	        if ((test[0] == 'z' || test[0] == 'Z') && (test[1] == 'h' || test[1] == 'H') && (test[2] == '0') && (test[3] == '3')){
+	        	freq = 30;
 	        }
 
-	        if ((test[0] == 'l'||test[0] == 'L') && (test[1] == 'l' || test[1] == 'L') && (test[2] == 'a' || test[2] == 'A')){		//starts pulses
-	        	ALL ^= 1;
+	        else if ((test[0] == 'z' || test[0] == 'Z') && (test[1] == 'h' || test[1] == 'H') && (test[2] == '0') && (test[3] == '6')){
+	        	        	freq = 60;
 	        }
 
-	        if ((test[0] == '1') && (test[1]=='c' || test[1]=='C') && (test[2] == 'n' || test[2] == 'N') && (test[3] == 'y' || test[3] == 'Y') && (test[4] == 's' || test[4] == 'S')){
-	        	SYNC1 ^= 1;
+	        else if ((test[0] == 'z' || test[0] == 'Z') && (test[1] == 'h' || test[1] == 'H') && (test[2] == '0') && (test[3] == '4')){
+	        	        	freq = 40;
 	        }
 
-	        if ((test[0] == '2') && (test[1]=='c' || test[1]=='C') && (test[2] == 'n' || test[2] == 'N') && (test[3] == 'y' || test[3] == 'Y') && (test[4] == 's' || test[4] == 'S')){
-	        	SYNC2 ^= 1;
+	        else if ((test[0] == 'z' || test[0] == 'Z') && (test[1] == 'h' || test[1] == 'H') && (test[2] == '0') && (test[3] == '5')){
+	        	        	freq = 30;
 	        }
 
-	        if ((test[0] == '1') && (test[1]=='m' || test[1]=='M') && (test[2] == 'a' || test[2] == 'A') && (test[3] == 'c' || test[3] == 'C')){
-	        	CAM1 ^= 1;
+	        else if ((test[0] == 'z' || test[0] == 'Z') && (test[1] == 'h' || test[1] == 'H') && (test[2] == '5') && (test[3] == '1')){
+	        	        	freq = 15;
 	        }
 
-	        if ((test[0] == '2') && (test[1]=='m' || test[1]=='M') && (test[2] == 'a' || test[2] == 'A') && (test[3] == 'c' || test[3] == 'C')){
-	        	CAM2 ^= 1;
-	        }
+	        else{
+	        				ALL = SYNC1 = SYNC2 = CAM1 = CAM2 = SIDE1 = SIDE2 = SYNC = CAM = 0;
 
-	        if ((test[0] == '1') && (test[1]=='E' || test[1]=='e') && (test[2] == 'd' || test[2] == 'D') && (test[3] == 'i' || test[3] == 'I') && (test[4] == 's' || test[4] == 'S')){
-	        	SIDE1 ^= 1;
-	        }
+	        				if ((test[0] == 't'||test[0] == 'T') && (test[1] == 's' || test[1] == 'S') && (test[2] == 'e' || test[2] == 'E') && (test[3] == 't' || test[3] == 'T')){ //outputs '30pulses@"x"hz
+	        		        	cameratest();
+	        		        }
 
-	        if ((test[0] == '2') && (test[1]=='E' || test[1]=='e') && (test[2] == 'd' || test[2] == 'D') && (test[3] == 'i' || test[3] == 'I') && (test[4] == 's' || test[4] == 'S')){
-	        	SIDE2 ^= 1;
-	        }
+	        				else if ((test[0] == 'l'||test[0] == 'L') && (test[1] == 'l' || test[1] == 'L') && (test[2] == 'a' || test[2] == 'A')){		//starts pulses
+	        		        	ALL ^= 1;
+	        		        }
 
-	        if ((test[0]=='c' || test[0]=='C') && (test[1] == 'n' || test[1] == 'N') && (test[2] == 'y' || test[2] == 'Y') && (test[3] == 's' || test[3] == 'S')){
-	        	SYNC ^= 1;
-	        }
+	        				else if ((test[0] == '1') && (test[1]=='c' || test[1]=='C') && (test[2] == 'n' || test[2] == 'N') && (test[3] == 'y' || test[3] == 'Y') && (test[4] == 's' || test[4] == 'S')){
+	        		        	SYNC1 ^= 1;
+	        		        }
 
-	        if ((test[0]=='M' || test[0]=='m') && (test[1] == 'a' || test[1] == 'A') && (test[2] == 'c' || test[2] == 'C')){
-	        	CAM ^= 1;
-	        }
+	        				else if ((test[0] == '2') && (test[1]=='c' || test[1]=='C') && (test[2] == 'n' || test[2] == 'N') && (test[3] == 'y' || test[3] == 'Y') && (test[4] == 's' || test[4] == 'S')){
+	        		        	SYNC2 ^= 1;
+	        		        }
 
+	        				else if ((test[0] == '1') && (test[1]=='m' || test[1]=='M') && (test[2] == 'a' || test[2] == 'A') && (test[3] == 'c' || test[3] == 'C')){
+	        		        	CAM1 ^= 1;
+	        		        }
+
+	        				else if ((test[0] == '2') && (test[1]=='m' || test[1]=='M') && (test[2] == 'a' || test[2] == 'A') && (test[3] == 'c' || test[3] == 'C')){
+	        		        	CAM2 ^= 1;
+	        		        }
+
+	        				else if ((test[0] == '1') && (test[1]=='E' || test[1]=='e') && (test[2] == 'd' || test[2] == 'D') && (test[3] == 'i' || test[3] == 'I') && (test[4] == 's' || test[4] == 'S')){
+	        		        	SIDE1 ^= 1;
+	        		        }
+
+	        				else if ((test[0] == '2') && (test[1]=='E' || test[1]=='e') && (test[2] == 'd' || test[2] == 'D') && (test[3] == 'i' || test[3] == 'I') && (test[4] == 's' || test[4] == 'S')){
+	        		        	SIDE2 ^= 1;
+	        		        }
+
+	        				else if ((test[0]=='c' || test[0]=='C') && (test[1] == 'n' || test[1] == 'N') && (test[2] == 'y' || test[2] == 'Y') && (test[3] == 's' || test[3] == 'S')){
+	        		        	SYNC ^= 1;
+	        		        }
+
+	        				else if ((test[0]=='M' || test[0]=='m') && (test[1] == 'a' || test[1] == 'A') && (test[2] == 'c' || test[2] == 'C')){
+	        		        	CAM ^= 1;
+	        		        }
+	        }
 
 
 	    }
