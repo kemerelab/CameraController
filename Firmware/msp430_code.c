@@ -160,19 +160,19 @@ __interrupt void USCI0RX_ISR(void)
 	        }
 
 	        else if ((test[0] == 'z' || test[0] == 'Z') && (test[1] == 'h' || test[1] == 'H') && (test[2] == '0') && (test[3] == '6')){
-	        	        	freq = 60;
+	        	freq = 60;
 	        }
 
 	        else if ((test[0] == 'z' || test[0] == 'Z') && (test[1] == 'h' || test[1] == 'H') && (test[2] == '0') && (test[3] == '4')){
-	        	        	freq = 40;
+	        	freq = 40;
 	        }
 
 	        else if ((test[0] == 'z' || test[0] == 'Z') && (test[1] == 'h' || test[1] == 'H') && (test[2] == '0') && (test[3] == '5')){
-	        	        	freq = 30;
+	        	freq = 50;
 	        }
 
 	        else if ((test[0] == 'z' || test[0] == 'Z') && (test[1] == 'h' || test[1] == 'H') && (test[2] == '5') && (test[3] == '1')){
-	        	        	freq = 15;
+	        	freq = 15;
 	        }
 
 	        else{
