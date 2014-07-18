@@ -38,7 +38,7 @@
 <layer number="42" name="bRestrict" color="1" fill="10" visible="yes" active="yes"/>
 <layer number="43" name="vRestrict" color="2" fill="10" visible="yes" active="yes"/>
 <layer number="44" name="Drills" color="7" fill="1" visible="no" active="yes"/>
-<layer number="45" name="Holes" color="7" fill="1" visible="no" active="yes"/>
+<layer number="45" name="Holes" color="7" fill="1" visible="yes" active="yes"/>
 <layer number="46" name="Milling" color="3" fill="1" visible="no" active="yes"/>
 <layer number="47" name="Measures" color="7" fill="1" visible="no" active="yes"/>
 <layer number="48" name="Document" color="7" fill="1" visible="yes" active="yes"/>
@@ -126,11 +126,17 @@
 <wire x1="45.009" y1="0" x2="44.978" y2="45.996" width="0" layer="20"/>
 <wire x1="44.978" y1="45.996" x2="0" y2="45.996" width="0" layer="20"/>
 <wire x1="0" y1="45.996" x2="0" y2="0" width="0" layer="20"/>
-<text x="28.448" y="37.719" size="1.778" layer="52" font="vector" ratio="16" rot="SMR270">Camera Controller
-Version 1.0
+<text x="30.734" y="37.719" size="1.778" layer="52" font="vector" ratio="16" rot="SMR270">Camera Controller
+Version 2
 Mini USB Input
 2 Audio Jacks, 2 BNC
-Kemere Lab</text>
+Kemere Lab
+by Tam Vu</text>
+<hole x="14.351" y="4.064" drill="2.8"/>
+<hole x="11.176" y="43.434" drill="2.8"/>
+<hole x="42.926" y="40.767" drill="2.8"/>
+<hole x="13.589" y="25.781" drill="2.8"/>
+<hole x="27.94" y="15.24" drill="2.8"/>
 </plain>
 <libraries>
 <library name="SparkFun-DigitalIC">
@@ -870,11 +876,11 @@ design rules under a new name.</description>
 </pass>
 </autorouter>
 <elements>
-<element name="USB_RCPT" library="con-cypressindustries" package="32005-201" value="MINI-USB-32005-201" x="6.329" y="36.504" smashed="yes">
-<attribute name="OC_NEWARK" value="unknown" x="32.999" y="28.884" size="1.778" layer="27" display="off"/>
-<attribute name="MPN" value="" x="32.999" y="28.884" size="1.778" layer="27" display="off"/>
-<attribute name="MF" value="" x="32.999" y="28.884" size="1.778" layer="27" display="off"/>
-<attribute name="OC_FARNELL" value="unknown" x="32.999" y="28.884" size="1.778" layer="27" display="off"/>
+<element name="USB_RCPT" library="con-cypressindustries" package="32005-201" value="MINI-USB-32005-201" x="4.551" y="36.504" smashed="yes">
+<attribute name="OC_NEWARK" value="unknown" x="31.221" y="28.884" size="1.778" layer="27" display="off"/>
+<attribute name="MPN" value="" x="31.221" y="28.884" size="1.778" layer="27" display="off"/>
+<attribute name="MF" value="" x="31.221" y="28.884" size="1.778" layer="27" display="off"/>
+<attribute name="OC_FARNELL" value="unknown" x="31.221" y="28.884" size="1.778" layer="27" display="off"/>
 </element>
 <element name="MSP430" library="BiphasicBoard" package="20_PIN" value="" x="18.545" y="10.772" smashed="yes" rot="R270">
 <attribute name="NAME" x="17.2657" y="6.2411" size="0.6096" layer="25" rot="SR0"/>
@@ -884,35 +890,35 @@ design rules under a new name.</description>
 <attribute name="SPICEMODEL" value="NONE" x="10.604" y="16.793" size="1.778" layer="27" rot="R180" display="off"/>
 <attribute name="SPICETYPE" value="diode" x="10.604" y="16.793" size="1.778" layer="27" rot="R180" display="off"/>
 <attribute name="SPICEPREFIX" value="D" x="10.604" y="16.793" size="1.778" layer="27" rot="R180" display="off"/>
-<attribute name="NAME" x="12.764" y="16.5572" size="0.6096" layer="25" rot="SR0"/>
+<attribute name="NAME" x="12.637" y="16.9382" size="0.6096" layer="25" rot="SR0"/>
 <attribute name="VALUE" x="11.874" y="19.333" size="1.27" layer="27" rot="R180"/>
 </element>
-<element name="C1" library="CameraController" package="C0805" value="10uF" x="43.151" y="38.798" smashed="yes" rot="R270">
-<attribute name="NAME" x="43.7764" y="41.6088" size="0.6096" layer="25" rot="R180"/>
+<element name="C1" library="CameraController" package="C0805" value="10uF" x="37.148" y="37.817" smashed="yes">
+<attribute name="NAME" x="33.8206" y="37.2582" size="0.6096" layer="25"/>
 </element>
-<element name="C2" library="CameraController" package="C0603" value=".1uF" x="40.611" y="38.29" smashed="yes" rot="R270">
-<attribute name="NAME" x="39.7388" y="40.0776" size="0.6096" layer="25"/>
+<element name="C2" library="CameraController" package="C0603" value=".1uF" x="41.212" y="37.817" smashed="yes">
+<attribute name="NAME" x="43.1678" y="37.5376" size="0.6096" layer="25"/>
 </element>
-<element name="C3" library="CameraController" package="C0603" value=".1uF" x="18.386" y="19.748" smashed="yes" rot="R270">
-<attribute name="NAME" x="18.098" y="21.5102" size="0.6096" layer="25"/>
+<element name="C3" library="CameraController" package="C0603" value=".1uF" x="18.513" y="19.748" smashed="yes" rot="R270">
+<attribute name="NAME" x="18.225" y="21.5102" size="0.6096" layer="25"/>
 </element>
-<element name="JP1" library="CameraController" package="AUDIO-JACK" value="" x="5.525" y="24.355" smashed="yes">
-<attribute name="NAME" x="4.255" y="26.895" size="0.4064" layer="25"/>
-<attribute name="VALUE" x="4.255" y="25.625" size="0.4064" layer="27"/>
+<element name="JP1" library="CameraController" package="AUDIO-JACK" value="" x="3.493" y="24.355" smashed="yes">
+<attribute name="NAME" x="2.223" y="26.895" size="0.4064" layer="25"/>
+<attribute name="VALUE" x="2.223" y="25.625" size="0.4064" layer="27"/>
 </element>
-<element name="JP2" library="CameraController" package="AUDIO-JACK" value="" x="5.398" y="9.242" smashed="yes">
-<attribute name="NAME" x="4.128" y="11.782" size="0.4064" layer="25"/>
-<attribute name="VALUE" x="4.128" y="10.512" size="0.4064" layer="27"/>
+<element name="JP2" library="CameraController" package="AUDIO-JACK" value="" x="3.493" y="9.242" smashed="yes">
+<attribute name="NAME" x="2.223" y="11.782" size="0.4064" layer="25"/>
+<attribute name="VALUE" x="2.223" y="10.512" size="0.4064" layer="27"/>
 </element>
-<element name="PIN_HEADER" library="con-lstb" package="MA04-1" value="" x="21.646" y="3.617" smashed="yes" rot="R180">
-<attribute name="OC_NEWARK" value="unknown" x="21.646" y="3.617" size="1.778" layer="27" rot="R180" display="off"/>
-<attribute name="MPN" value="" x="21.646" y="3.617" size="1.778" layer="27" rot="R180" display="off"/>
-<attribute name="MF" value="" x="21.646" y="3.617" size="1.778" layer="27" rot="R180" display="off"/>
-<attribute name="OC_FARNELL" value="unknown" x="21.646" y="3.617" size="1.778" layer="27" rot="R180" display="off"/>
-<attribute name="VALUE" x="21.011" y="1.966" size="1.27" layer="27" ratio="10" rot="R180"/>
+<element name="PIN_HEADER" library="con-lstb" package="MA04-1" value="" x="22.789" y="3.617" smashed="yes" rot="R180">
+<attribute name="OC_NEWARK" value="unknown" x="22.789" y="3.617" size="1.778" layer="27" rot="R180" display="off"/>
+<attribute name="MPN" value="" x="22.789" y="3.617" size="1.778" layer="27" rot="R180" display="off"/>
+<attribute name="MF" value="" x="22.789" y="3.617" size="1.778" layer="27" rot="R180" display="off"/>
+<attribute name="OC_FARNELL" value="unknown" x="22.789" y="3.617" size="1.778" layer="27" rot="R180" display="off"/>
+<attribute name="VALUE" x="22.154" y="1.966" size="1.27" layer="27" ratio="10" rot="R180"/>
 </element>
 <element name="R1" library="BiphasicBoard" package="R1206" value="" x="24.296" y="22.392" smashed="yes">
-<attribute name="NAME" x="27.0646" y="24.7034" size="0.6096" layer="25"/>
+<attribute name="NAME" x="26.9376" y="22.4174" size="0.6096" layer="25"/>
 <attribute name="VALUE" x="22.899" y="19.979" size="1.27" layer="27"/>
 </element>
 <element name="BNC2" library="SparkFun-Connectors" package="BNC" value="BNCPTH" x="34.079" y="10.539" smashed="yes" rot="R270">
@@ -923,12 +929,12 @@ design rules under a new name.</description>
 <attribute name="NAME" x="43.087" y="35.067" size="0.4064" layer="25" rot="R270"/>
 <attribute name="VALUE" x="41.817" y="35.067" size="0.4064" layer="27" rot="SR270"/>
 </element>
-<element name="SYNC1_LED" library="CameraController" package="LED_1206" value="" x="32.579" y="1.406" smashed="yes">
-<attribute name="SPICEMODEL" value="NONE" x="32.579" y="1.406" size="1.778" layer="27" display="off"/>
-<attribute name="SPICETYPE" value="diode" x="32.579" y="1.406" size="1.778" layer="27" display="off"/>
-<attribute name="SPICEPREFIX" value="D" x="32.579" y="1.406" size="1.778" layer="27" display="off"/>
-<attribute name="NAME" x="23.3588" y="0.8472" size="0.6096" layer="25"/>
-<attribute name="VALUE" x="31.309" y="-1.134" size="1.27" layer="27"/>
+<element name="SYNC1_LED" library="CameraController" package="LED_1206" value="" x="30.801" y="1.406" smashed="yes">
+<attribute name="SPICEMODEL" value="NONE" x="30.801" y="1.406" size="1.778" layer="27" display="off"/>
+<attribute name="SPICETYPE" value="diode" x="30.801" y="1.406" size="1.778" layer="27" display="off"/>
+<attribute name="SPICEPREFIX" value="D" x="30.801" y="1.406" size="1.778" layer="27" display="off"/>
+<attribute name="NAME" x="22.3428" y="0.9742" size="0.6096" layer="25"/>
+<attribute name="VALUE" x="29.531" y="-1.134" size="1.27" layer="27"/>
 </element>
 <element name="RXLED" library="CameraController" package="LED_1206" value="" x="19.237" y="26.958" smashed="yes" rot="R180">
 <attribute name="SPICEMODEL" value="NONE" x="19.237" y="26.958" size="1.778" layer="27" rot="R180" display="off"/>
@@ -945,7 +951,7 @@ design rules under a new name.</description>
 <attribute name="VALUE" x="20.507" y="27.255" size="1.27" layer="27" rot="R180"/>
 </element>
 <element name="R2" library="BiphasicBoard" package="R1206" value="" x="24.264" y="24.765" smashed="yes" rot="R180">
-<attribute name="NAME" x="28.1248" y="22.6568" size="0.6096" layer="25" rot="R180"/>
+<attribute name="NAME" x="27.9978" y="24.9428" size="0.6096" layer="25" rot="R180"/>
 <attribute name="VALUE" x="25.661" y="27.178" size="1.27" layer="27" rot="R180"/>
 </element>
 <element name="R3" library="BiphasicBoard" package="R1206" value="" x="24.264" y="27.101" smashed="yes" rot="R180">
@@ -971,35 +977,35 @@ design rules under a new name.</description>
 <attribute name="NAME" x="13.1226" y="0.92" size="0.6096" layer="25" rot="SR0"/>
 <attribute name="VALUE" x="11.744" y="4.16" size="1.27" layer="27" rot="R180"/>
 </element>
-<element name="SYNC2_LED" library="CameraController" package="LED_1206" value="" x="32.96" y="19.546" smashed="yes">
-<attribute name="SPICEMODEL" value="NONE" x="32.96" y="19.546" size="1.778" layer="27" display="off"/>
-<attribute name="SPICETYPE" value="diode" x="32.96" y="19.546" size="1.778" layer="27" display="off"/>
-<attribute name="SPICEPREFIX" value="D" x="32.96" y="19.546" size="1.778" layer="27" display="off"/>
-<attribute name="NAME" x="25.3908" y="19.2158" size="0.6096" layer="25" rot="SR0"/>
-<attribute name="VALUE" x="31.69" y="17.006" size="1.27" layer="27"/>
+<element name="SYNC2_LED" library="CameraController" package="LED_1206" value="" x="30.801" y="19.546" smashed="yes">
+<attribute name="SPICEMODEL" value="NONE" x="30.801" y="19.546" size="1.778" layer="27" display="off"/>
+<attribute name="SPICETYPE" value="diode" x="30.801" y="19.546" size="1.778" layer="27" display="off"/>
+<attribute name="SPICEPREFIX" value="D" x="30.801" y="19.546" size="1.778" layer="27" display="off"/>
+<attribute name="NAME" x="23.2318" y="19.2158" size="0.6096" layer="25" rot="SR0"/>
+<attribute name="VALUE" x="29.531" y="17.006" size="1.27" layer="27"/>
 </element>
 <element name="R6" library="BiphasicBoard" package="R1206" value="" x="5.087" y="1.586" smashed="yes" rot="R180">
 <attribute name="NAME" x="1.2122" y="1.335" size="0.6096" layer="25" rot="SR0"/>
 <attribute name="VALUE" x="6.484" y="3.999" size="1.27" layer="27" rot="R180"/>
 </element>
-<element name="R7" library="BiphasicBoard" package="R1206" value="" x="37.712" y="1.412" smashed="yes">
-<attribute name="NAME" x="40.8362" y="1.3358" size="0.6096" layer="25" rot="SR0"/>
-<attribute name="VALUE" x="36.315" y="-1.001" size="1.27" layer="27"/>
+<element name="R7" library="BiphasicBoard" package="R1206" value="" x="35.807" y="1.412" smashed="yes">
+<attribute name="NAME" x="38.9312" y="1.3358" size="0.6096" layer="25" rot="SR0"/>
+<attribute name="VALUE" x="34.41" y="-1.001" size="1.27" layer="27"/>
 </element>
-<element name="R8" library="BiphasicBoard" package="R1206" value="" x="38.347" y="19.523" smashed="yes">
-<attribute name="NAME" x="41.395" y="19.1928" size="0.6096" layer="25"/>
-<attribute name="VALUE" x="36.95" y="17.11" size="1.27" layer="27"/>
+<element name="R8" library="BiphasicBoard" package="R1206" value="" x="35.807" y="19.65" smashed="yes">
+<attribute name="NAME" x="38.855" y="19.3198" size="0.6096" layer="25"/>
+<attribute name="VALUE" x="34.41" y="17.237" size="1.27" layer="27"/>
 </element>
-<element name="PWR_LED" library="CameraController" package="LED_1206" value="" x="20.133" y="15.797" smashed="yes">
-<attribute name="SPICEMODEL" value="NONE" x="20.133" y="15.797" size="1.778" layer="27" display="off"/>
-<attribute name="SPICETYPE" value="diode" x="20.133" y="15.797" size="1.778" layer="27" display="off"/>
-<attribute name="SPICEPREFIX" value="D" x="20.133" y="15.797" size="1.778" layer="27" display="off"/>
-<attribute name="NAME" x="18.7868" y="17.1432" size="0.6096" layer="25" rot="SR0"/>
-<attribute name="VALUE" x="18.863" y="13.257" size="1.27" layer="27"/>
+<element name="PWR_LED" library="CameraController" package="LED_1206" value="" x="17.078" y="15.572" smashed="yes" rot="R180">
+<attribute name="SPICEMODEL" value="NONE" x="17.078" y="15.572" size="1.778" layer="27" rot="R180" display="off"/>
+<attribute name="SPICETYPE" value="diode" x="17.078" y="15.572" size="1.778" layer="27" rot="R180" display="off"/>
+<attribute name="SPICEPREFIX" value="D" x="17.078" y="15.572" size="1.778" layer="27" rot="R180" display="off"/>
+<attribute name="NAME" x="19.6758" y="15.1112" size="0.6096" layer="25" rot="SR0"/>
+<attribute name="VALUE" x="18.348" y="18.112" size="1.27" layer="27" rot="R180"/>
 </element>
-<element name="R9" library="BiphasicBoard" package="R1206" value="" x="24.9612" y="15.7978" smashed="yes">
-<attribute name="NAME" x="28.8868" y="16.2062" size="0.6096" layer="25" rot="R180"/>
-<attribute name="VALUE" x="23.5642" y="13.3848" size="1.27" layer="27"/>
+<element name="R9" library="BiphasicBoard" package="R1206" value="" x="16.0792" y="20.6432" smashed="yes" rot="R90">
+<attribute name="NAME" x="13.7852" y="21.6398" size="0.6096" layer="25"/>
+<attribute name="VALUE" x="18.4922" y="19.2462" size="1.27" layer="27" rot="R90"/>
 </element>
 <element name="NC" library="con-lstb" package="MA09-1" value="" x="29.845" y="42.926" smashed="yes">
 <attribute name="OC_NEWARK" value="unknown" x="29.845" y="42.926" size="1.778" layer="27" display="off"/>
@@ -1064,14 +1070,7 @@ design rules under a new name.</description>
 <wire x1="18.542" y1="40.64" x2="18.542" y2="36.195" width="0.254" layer="1"/>
 <wire x1="18.542" y1="36.195" x2="15.082" y2="36.195" width="0.254" layer="1"/>
 <wire x1="15.082" y1="36.195" x2="15.082" y2="36.123" width="0.254" layer="1"/>
-<wire x1="40.611" y1="39.14" x2="40.611" y2="39.648" width="0.254" layer="1"/>
-<wire x1="40.611" y1="39.648" x2="43.151" y2="39.648" width="0.254" layer="1"/>
-<wire x1="40.611" y1="39.14" x2="35.179" y2="39.14" width="0.254" layer="1"/>
-<wire x1="35.179" y1="39.14" x2="35.179" y2="37.719" width="0.254" layer="1"/>
-<wire x1="35.179" y1="37.719" x2="32.766" y2="37.719" width="0.254" layer="1"/>
-<wire x1="32.766" y1="37.719" x2="32.766" y2="36.322" width="0.254" layer="1"/>
 <wire x1="25.686" y1="27.101" x2="25.686" y2="24.765" width="0.254" layer="1"/>
-<wire x1="32.766" y1="36.322" x2="31.496" y2="36.322" width="0.254" layer="1"/>
 <wire x1="31.496" y1="36.322" x2="31.496" y2="29.21" width="0.254" layer="1"/>
 <wire x1="31.496" y1="29.21" x2="25.686" y2="29.21" width="0.254" layer="1"/>
 <wire x1="25.686" y1="29.21" x2="25.686" y2="27.101" width="0.254" layer="1"/>
@@ -1079,14 +1078,18 @@ design rules under a new name.</description>
 <wire x1="18.542" y1="29.21" x2="18.542" y2="36.195" width="0.254" layer="1"/>
 <wire x1="25.686" y1="24.765" x2="25.718" y2="24.765" width="0.254" layer="1"/>
 <wire x1="25.718" y1="24.765" x2="25.718" y2="22.392" width="0.254" layer="1"/>
-<wire x1="9.329" y1="38.104" x2="11.43" y2="38.104" width="0.254" layer="1"/>
+<wire x1="7.551" y1="38.104" x2="11.43" y2="38.104" width="0.254" layer="1"/>
 <wire x1="11.43" y1="38.104" x2="11.43" y2="40.64" width="0.254" layer="1"/>
 <wire x1="11.43" y1="40.64" x2="18.542" y2="40.64" width="0.254" layer="1"/>
+<wire x1="31.496" y1="36.322" x2="36.298" y2="36.322" width="0.254" layer="1"/>
+<wire x1="36.298" y1="36.322" x2="40.362" y2="36.322" width="0.254" layer="1"/>
+<wire x1="36.298" y1="37.817" x2="36.298" y2="36.322" width="0.254" layer="1"/>
+<wire x1="40.362" y1="37.817" x2="40.362" y2="36.322" width="0.254" layer="1"/>
 </signal>
 <signal name="D+">
 <contactref element="USB_RCPT" pad="3"/>
 <contactref element="U1" pad="15"/>
-<wire x1="9.329" y1="36.504" x2="12.7" y2="36.504" width="0.254" layer="1"/>
+<wire x1="7.551" y1="36.504" x2="12.7" y2="36.504" width="0.254" layer="1"/>
 <wire x1="12.7" y1="36.504" x2="12.7" y2="39.37" width="0.254" layer="1"/>
 <wire x1="12.7" y1="39.37" x2="15.082" y2="39.37" width="0.254" layer="1"/>
 <wire x1="15.082" y1="39.37" x2="15.082" y2="39.373" width="0.254" layer="1"/>
@@ -1097,7 +1100,7 @@ design rules under a new name.</description>
 <wire x1="16.256" y1="40.005" x2="16.256" y2="38.735" width="0.254" layer="1"/>
 <wire x1="16.256" y1="38.735" x2="15.082" y2="38.735" width="0.254" layer="1"/>
 <wire x1="15.082" y1="38.735" x2="15.082" y2="38.723" width="0.254" layer="1"/>
-<wire x1="9.329" y1="37.304" x2="12.065" y2="37.304" width="0.254" layer="1"/>
+<wire x1="7.551" y1="37.304" x2="12.065" y2="37.304" width="0.254" layer="1"/>
 <wire x1="12.065" y1="37.304" x2="12.065" y2="40.005" width="0.254" layer="1"/>
 <wire x1="12.065" y1="40.005" x2="16.256" y2="40.005" width="0.254" layer="1"/>
 </signal>
@@ -1117,26 +1120,24 @@ design rules under a new name.</description>
 <wire x1="17.018" y1="38.735" x2="17.018" y2="36.195" width="0.254" layer="16"/>
 <wire x1="17.018" y1="36.195" x2="26.67" y2="36.195" width="0.254" layer="16"/>
 <wire x1="26.67" y1="36.195" x2="26.67" y2="33.147" width="0.254" layer="16"/>
-<wire x1="15.875" y1="13.6969" x2="15.875" y2="15.494" width="0.254" layer="1"/>
 <contactref element="PWR_LED" pad="A"/>
 <contactref element="MSP430" pad="1"/>
 <contactref element="PIN_HEADER" pad="1"/>
 <via x="14.2494" y="20.3708" extent="1-16" drill="0.5"/>
 <wire x1="14.2494" y1="20.3708" x2="14.224" y2="6.223" width="0.254" layer="16"/>
-<wire x1="14.224" y1="6.223" x2="25.4" y2="6.223" width="0.254" layer="16"/>
-<wire x1="25.4" y1="6.223" x2="25.4" y2="4.506" width="0.254" layer="16"/>
-<wire x1="25.4" y1="4.506" x2="25.456" y2="3.617" width="0.254" layer="16"/>
+<wire x1="14.224" y1="6.223" x2="26.67" y2="6.223" width="0.254" layer="16"/>
+<wire x1="26.67" y1="6.223" x2="26.67" y2="3.617" width="0.254" layer="16"/>
+<wire x1="26.67" y1="3.617" x2="26.599" y2="3.617" width="0.254" layer="16"/>
 <wire x1="14.2494" y1="20.3708" x2="14.224" y2="13.6969" width="0.254" layer="1"/>
 <wire x1="14.224" y1="13.6969" x2="15.6449" y2="13.6969" width="0.254" layer="1"/>
-<wire x1="15.875" y1="13.6969" x2="15.6449" y2="13.6969" width="0.254" layer="1"/>
-<wire x1="18.711" y1="15.797" x2="18.711" y2="15.494" width="0.254" layer="1"/>
-<wire x1="18.711" y1="15.494" x2="15.875" y2="15.494" width="0.254" layer="1"/>
-<wire x1="18.386" y1="20.598" x2="14.2494" y2="20.598" width="0.254" layer="1"/>
+<wire x1="18.513" y1="20.598" x2="14.2494" y2="20.598" width="0.254" layer="1"/>
 <wire x1="17.018" y1="38.735" x2="17.018" y2="20.3708" width="0.254" layer="16"/>
 <wire x1="17.018" y1="20.3708" x2="14.2494" y2="20.3708" width="0.254" layer="16"/>
 <wire x1="17.018" y1="38.735" x2="17.018" y2="38.073" width="0.254" layer="1"/>
 <wire x1="17.018" y1="38.073" x2="15.082" y2="38.073" width="0.254" layer="1"/>
 <wire x1="14.2494" y1="20.598" x2="14.2494" y2="20.3708" width="0.254" layer="1"/>
+<wire x1="15.6449" y1="13.6969" x2="18.5" y2="13.6969" width="0.254" layer="1"/>
+<wire x1="18.5" y1="13.6969" x2="18.5" y2="15.572" width="0.254" layer="1"/>
 </signal>
 <signal name="TXD">
 <contactref element="MSP430" pad="3"/>
@@ -1167,16 +1168,16 @@ design rules under a new name.</description>
 <contactref element="MSP430" pad="17"/>
 <wire x1="21.445" y1="11.747" x2="29.718" y2="11.747" width="0.254" layer="1"/>
 <wire x1="29.718" y1="11.747" x2="29.718" y2="5.969" width="0.254" layer="1"/>
-<wire x1="29.718" y1="5.969" x2="20.376" y2="5.969" width="0.254" layer="1"/>
-<wire x1="20.376" y1="5.969" x2="20.376" y2="3.617" width="0.254" layer="1"/>
+<wire x1="29.718" y1="5.969" x2="21.519" y2="5.969" width="0.254" layer="1"/>
+<wire x1="21.519" y1="5.969" x2="21.519" y2="3.617" width="0.254" layer="1"/>
 </signal>
 <signal name="RST">
 <contactref element="PIN_HEADER" pad="4"/>
 <contactref element="MSP430" pad="16"/>
 <contactref element="R1" pad="1"/>
-<wire x1="17.836" y1="3.617" x2="19.177" y2="3.617" width="0.254" layer="1"/>
-<wire x1="19.177" y1="3.617" x2="19.177" y2="6.858" width="0.254" layer="1"/>
-<wire x1="19.177" y1="6.858" x2="29.083" y2="6.858" width="0.254" layer="1"/>
+<wire x1="18.979" y1="3.617" x2="20.32" y2="3.617" width="0.254" layer="1"/>
+<wire x1="20.32" y1="3.617" x2="20.32" y2="6.858" width="0.254" layer="1"/>
+<wire x1="20.32" y1="6.858" x2="29.083" y2="6.858" width="0.254" layer="1"/>
 <wire x1="29.083" y1="6.858" x2="29.083" y2="11.049" width="0.254" layer="1"/>
 <wire x1="29.083" y1="11.049" x2="21.445" y2="11.049" width="0.254" layer="1"/>
 <wire x1="22.874" y1="22.392" x2="20.066" y2="22.392" width="0.254" layer="1"/>
@@ -1196,11 +1197,11 @@ design rules under a new name.</description>
 <contactref element="JP1" pad="RING"/>
 <contactref element="MSP430" pad="8"/>
 <wire x1="15.6449" y1="9.147" x2="13.335" y2="9.147" width="0.254" layer="1"/>
-<wire x1="13.335" y1="9.147" x2="13.335" y2="23.876" width="0.254" layer="1"/>
-<wire x1="13.335" y1="23.876" x2="12.192" y2="23.876" width="0.254" layer="1"/>
-<wire x1="12.192" y1="23.876" x2="12.192" y2="29.337" width="0.254" layer="1"/>
-<wire x1="12.192" y1="29.337" x2="10.525" y2="29.337" width="0.254" layer="1"/>
-<wire x1="10.525" y1="29.337" x2="10.525" y2="29.355" width="0.254" layer="1"/>
+<wire x1="13.335" y1="9.147" x2="13.335" y2="18.161" width="0.254" layer="1"/>
+<wire x1="13.335" y1="18.161" x2="10.16" y2="18.161" width="0.254" layer="1"/>
+<wire x1="10.16" y1="18.161" x2="10.16" y2="29.337" width="0.254" layer="1"/>
+<wire x1="10.16" y1="29.337" x2="8.493" y2="29.337" width="0.254" layer="1"/>
+<wire x1="8.493" y1="29.337" x2="8.493" y2="29.355" width="0.254" layer="1"/>
 </signal>
 <signal name="LED1">
 <contactref element="MSP430" pad="9"/>
@@ -1219,7 +1220,7 @@ design rules under a new name.</description>
 <signal name="CAM2">
 <contactref element="MSP430" pad="10"/>
 <contactref element="JP2" pad="RING"/>
-<wire x1="10.398" y1="14.242" x2="12.065" y2="14.242" width="0.254" layer="1"/>
+<wire x1="8.493" y1="14.242" x2="12.065" y2="14.242" width="0.254" layer="1"/>
 <wire x1="12.065" y1="14.242" x2="12.065" y2="7.747" width="0.254" layer="1"/>
 <wire x1="12.065" y1="7.747" x2="15.6449" y2="7.747" width="0.254" layer="1"/>
 <wire x1="15.6449" y1="7.747" x2="15.6449" y2="7.8471" width="0.254" layer="1"/>
@@ -1235,8 +1236,8 @@ design rules under a new name.</description>
 <signal name="N$5">
 <contactref element="CAM2_LED" pad="C"/>
 <contactref element="R6" pad="1"/>
-<wire x1="6.509" y1="1.586" x2="9.052" y2="1.586" width="0.254" layer="1"/>
 <wire x1="9.052" y1="1.586" x2="9.052" y2="1.62" width="0.254" layer="1"/>
+<wire x1="6.509" y1="1.586" x2="9.052" y2="1.586" width="0.254" layer="1"/>
 </signal>
 <signal name="SYNC1">
 <contactref element="MSP430" pad="12"/>
@@ -1255,43 +1256,49 @@ design rules under a new name.</description>
 <via x="27.94" y="9.144" extent="1-16" drill="0.5"/>
 <wire x1="21.445" y1="9.147" x2="21.445" y2="9.144" width="0.254" layer="1"/>
 <wire x1="21.445" y1="9.144" x2="27.94" y2="9.144" width="0.254" layer="1"/>
-<via x="29.337" y="1.524" extent="1-16" drill="0.5"/>
-<wire x1="31.157" y1="1.406" x2="31.157" y2="1.524" width="0.254" layer="1"/>
-<wire x1="27.94" y1="9.144" x2="29.337" y2="9.144" width="0.254" layer="16"/>
-<wire x1="29.337" y1="9.144" x2="29.337" y2="1.524" width="0.254" layer="16"/>
-<wire x1="31.157" y1="1.524" x2="29.337" y2="1.524" width="0.254" layer="1"/>
+<via x="27.94" y="1.397" extent="1-16" drill="0.5"/>
+<wire x1="27.94" y1="9.144" x2="27.94" y2="1.397" width="0.254" layer="16"/>
+<wire x1="27.94" y1="1.397" x2="27.94" y2="1.406" width="0.254" layer="1"/>
+<wire x1="27.94" y1="1.406" x2="29.379" y2="1.406" width="0.254" layer="1"/>
 </signal>
 <signal name="N$7">
 <contactref element="SYNC1_LED" pad="C"/>
 <contactref element="R7" pad="1"/>
-<wire x1="34.001" y1="1.406" x2="36.29" y2="1.406" width="0.254" layer="1"/>
-<wire x1="36.29" y1="1.406" x2="36.29" y2="1.412" width="0.254" layer="1"/>
+<wire x1="32.223" y1="1.406" x2="32.223" y2="1.412" width="0.254" layer="1"/>
+<wire x1="32.223" y1="1.412" x2="34.385" y2="1.412" width="0.254" layer="1"/>
 </signal>
 <signal name="SYNC2">
 <contactref element="MSP430" pad="19"/>
 <contactref element="BNC1" pad="S"/>
 <wire x1="21.445" y1="13.0469" x2="30.226" y2="13.0469" width="0.254" layer="1"/>
-<wire x1="30.226" y1="13.0469" x2="30.226" y2="28.702" width="0.254" layer="1"/>
 <wire x1="30.226" y1="28.702" x2="34.197" y2="28.702" width="0.254" layer="1"/>
 <wire x1="34.197" y1="28.702" x2="34.197" y2="28.717" width="0.254" layer="1"/>
+<wire x1="30.226" y1="13.0469" x2="30.226" y2="17.526" width="0.254" layer="1"/>
+<wire x1="30.226" y1="17.526" x2="28.194" y2="17.526" width="0.254" layer="1"/>
+<wire x1="28.194" y1="17.526" x2="28.194" y2="21.717" width="0.254" layer="1"/>
+<wire x1="28.194" y1="21.717" x2="30.226" y2="21.717" width="0.254" layer="1"/>
+<wire x1="30.226" y1="21.717" x2="30.226" y2="28.702" width="0.254" layer="1"/>
 </signal>
 <signal name="N$8">
 <contactref element="MSP430" pad="18"/>
 <contactref element="SYNC2_LED" pad="A"/>
 <wire x1="21.445" y1="12.397" x2="31.538" y2="12.397" width="0.254" layer="1"/>
-<wire x1="31.538" y1="12.397" x2="31.538" y2="19.546" width="0.254" layer="1"/>
+<wire x1="31.538" y1="12.397" x2="31.538" y2="18.161" width="0.254" layer="1"/>
+<wire x1="31.538" y1="18.161" x2="29.337" y2="18.161" width="0.254" layer="1"/>
+<wire x1="29.337" y1="18.161" x2="29.337" y2="19.546" width="0.254" layer="1"/>
+<wire x1="29.337" y1="19.546" x2="29.379" y2="19.546" width="0.254" layer="1"/>
 </signal>
 <signal name="N$9">
 <contactref element="SYNC2_LED" pad="C"/>
 <contactref element="R8" pad="1"/>
-<wire x1="34.382" y1="19.546" x2="36.925" y2="19.546" width="0.254" layer="1"/>
-<wire x1="36.925" y1="19.546" x2="36.925" y2="19.523" width="0.254" layer="1"/>
+<wire x1="32.223" y1="19.546" x2="32.223" y2="19.65" width="0.254" layer="1"/>
+<wire x1="32.223" y1="19.65" x2="34.385" y2="19.65" width="0.254" layer="1"/>
 </signal>
 <signal name="N$10">
 <contactref element="PWR_LED" pad="C"/>
 <contactref element="R9" pad="1"/>
-<wire x1="21.555" y1="15.797" x2="21.555" y2="15.7978" width="0.254" layer="1"/>
-<wire x1="21.555" y1="15.7978" x2="23.5392" y2="15.7978" width="0.254" layer="1"/>
+<wire x1="15.656" y1="15.572" x2="16.0792" y2="15.572" width="0.254" layer="1"/>
+<wire x1="16.0792" y1="15.572" x2="16.0792" y2="19.2212" width="0.254" layer="1"/>
 </signal>
 <signal name="N$11">
 <contactref element="U1" pad="23"/>
@@ -1431,6 +1438,10 @@ design rules under a new name.</description>
 <wire x1="14.986" y1="30.923" x2="14.986" y2="29.845" width="0.254" layer="1"/>
 <wire x1="15.875" y1="40.9194" x2="14.986" y2="40.9194" width="0.254" layer="16"/>
 <wire x1="14.986" y1="40.9194" x2="14.986" y2="29.845" width="0.254" layer="16"/>
+</signal>
+<signal name="N$13">
+</signal>
+<signal name="N$14">
 </signal>
 </signals>
 </board>
